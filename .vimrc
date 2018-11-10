@@ -17,7 +17,7 @@ set smartindent
 set cindent
 set tabstop=8
 set shiftwidth=8
-
+set clipboard=unnamed
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -141,3 +141,21 @@ set diffopt+=vertical
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+
+" User scritps "
+function RmTrailSp()
+	:%s/\s\+$//g
+	:w
+endfunction
+
+
+function ConvertHtml()
+	:%s/<code>/`/g
+	:%s/<\/code>/`/g
+	:%s/<li>/* /g
+	:%s/<\/li>//g
+	:w
+endfunction
+
+

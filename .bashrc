@@ -115,7 +115,7 @@ fi
 
 # ADDED by user
 PS1="{bg_jobs\j} \[\e]0;\u@\h: \W\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ "
-export PATH=$PATH:~/work/scripts
+# export PATH=$PATH:~/work/scripts
 
 alias gccw="gcc -Wall -Werror -Wextra -pedantic"
 
